@@ -11,3 +11,6 @@ Criar sua primeira aplicação com uma tela de home (código de referência MyAp
 Criar a estrutura básica para fazer uma requisição REST quando abrir a segunda tela (código de referência MyApplication-requisicao) API utilizada: `https://jsonplaceholder.typicode.com/users/`
 
 
+## Modulo 3 - Lista
+Criar o layout para exibir a lista retornada na requisição (feita no módulo 2) (código de referência MyApplication-lista) Quando o usuário clicar em um item da lista, deverá ser redirecionado para uma nova tela vazia recebendo o id do usuário selecionado na lista
+

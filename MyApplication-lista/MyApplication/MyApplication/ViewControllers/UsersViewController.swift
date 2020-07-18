@@ -10,11 +10,11 @@ import UIKit
 
 class UsersViewController: UIViewController {
         
-    let cellReuseIdentifier = "cell"
-    var usersApi = UsersAPI()
     @IBOutlet weak var tableView: UITableView!
     var users: [User] = []
-    
+    let cellReuseIdentifier = "cell"
+    var usersApi = UsersAPI()
+
     // Essa função é uma das funções presentes no chamado `Life cycle` de uma ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class UsersViewController: UIViewController {
     }
     
     func setupTableView() {
+        tableView.allowsSelection = true
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
@@ -47,6 +48,12 @@ class UsersViewController: UIViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? DetailViewController {
+            let row = (sender as? NSIndexPath)?.row ?? 1
+            viewController.userId = row
+        }
+    }
     
 }
 
@@ -57,7 +64,8 @@ extension UsersViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToDetailSegue", sender: nil)
+        performSegue(withIdentifier: "goToDetailSegue", sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 
 }

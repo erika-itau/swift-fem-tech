@@ -17,6 +17,7 @@
 		2609AAEE24C3AF1500CF767E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2609AAED24C3AF1500CF767E /* Endpoints.swift */; };
 		2609AAF024C3AF8B00CF767E /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2609AAEF24C3AF8B00CF767E /* UsersAPI.swift */; };
 		2609AAF224C3B0FF00CF767E /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2609AAF124C3B0FF00CF767E /* UsersViewController.swift */; };
+		26D496F224C3BE95006F1C51 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D496F124C3BE95006F1C51 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2609AAED24C3AF1500CF767E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		2609AAEF24C3AF8B00CF767E /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		2609AAF124C3B0FF00CF767E /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		26D496F124C3BE95006F1C51 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				2609AADD24C3994F00CF767E /* HomeViewController.swift */,
 				2609AAF124C3B0FF00CF767E /* UsersViewController.swift */,
+				26D496F124C3BE95006F1C51 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				2609AACB24C398A400CF767E /* SceneDelegate.swift in Sources */,
 				2609AADE24C3994F00CF767E /* HomeViewController.swift in Sources */,
 				2609AAEE24C3AF1500CF767E /* Endpoints.swift in Sources */,
+				26D496F224C3BE95006F1C51 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
