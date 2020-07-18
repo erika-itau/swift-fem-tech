@@ -26,10 +26,4 @@ class HomeViewController: UIViewController {
         entryButton.clipsToBounds = true
     }
 
-    
-    //Essa função é chamada quando clicar no botão Entrar
-    @IBAction func performAction() {
-        performSegue(withIdentifier: "goToListSegue", sender: nil)
-    }
-
 }
