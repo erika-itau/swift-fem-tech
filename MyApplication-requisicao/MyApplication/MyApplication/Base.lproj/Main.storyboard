@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Users View Controller-->
         <scene sceneID="3qU-Pe-v6S">
             <objects>
-                <viewController id="WRz-lN-DsR" sceneMemberID="viewController">
+                <viewController id="WRz-lN-DsR" customClass="UsersViewController" customModule="MyApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eck-io-JL3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
