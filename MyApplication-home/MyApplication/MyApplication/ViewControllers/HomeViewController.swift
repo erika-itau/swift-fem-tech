@@ -29,8 +29,7 @@ class HomeViewController: UIViewController {
     
     //Essa função é chamada quando clicar no botão Entrar
     @IBAction func performAction() {
-        print("****** Cliquei no botão ******")
+        performSegue(withIdentifier: "goToListSegue", sender: nil)
     }
-    
 
 }

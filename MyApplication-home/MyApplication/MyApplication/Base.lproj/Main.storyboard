@@ -17,7 +17,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPl-VW-1BD">
                                 <rect key="frame" x="50" y="423" width="314" height="60"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9zC-zN-ecH"/>
                                 </constraints>
@@ -27,6 +27,7 @@
                                 </state>
                                 <connections>
                                     <action selector="performAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="uee-hJ-92o"/>
+                                    <segue destination="WRz-lN-DsR" kind="show" identifier="goToListSegue" id="27J-EH-bgq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,6 +46,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3qU-Pe-v6S">
+            <objects>
+                <viewController id="WRz-lN-DsR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eck-io-JL3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JMc-cP-Rm9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gdk-n9-3mI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udi-Bw-M9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="119"/>
         </scene>
     </scenes>
 </document>
