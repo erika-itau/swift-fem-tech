@@ -14,3 +14,13 @@ Criar a estrutura básica para fazer uma requisição REST quando abrir a segund
 ## Modulo 3 - Lista
 Criar o layout para exibir a lista retornada na requisição (feita no módulo 2) (código de referência MyApplication-lista) Quando o usuário clicar em um item da lista, deverá ser redirecionado para uma nova tela vazia recebendo o id do usuário selecionado na lista
 
+## Modulo 4 - Detalhe
+Criar a requisição para buscar as postagens do usuário selecionado no módulo anterior e exibir o resultado numa lista (código de referência SampleApp - detalhes) API utilizada: https://jsonplaceholder.typicode.com/posts?userId={id}
+
+## Ficha técnica
+App exemplo desenvolvido em `swift`
+Estrutura de Layouts utilizados: `AutoLayout`, `Storyboard`
+Request realizadas usando: `URLSession`, `Result` 
+Models usando: `Codable`
+Lista: `UITableView`
+
