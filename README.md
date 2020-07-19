@@ -24,4 +24,4 @@ Criar a requisição para buscar as postagens do usuário selecionado no módulo
 - Models usando: `Codable`
 - Lista: `UITableView`
 
-#Autora: Erika Albizzati
+# Autora: Erika Albizzati
