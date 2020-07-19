@@ -21,6 +21,7 @@ class UsersViewController: UIViewController {
 
     
     func loadUsers() {
+        // [User].self indica o tipo para o qual o dataRequest irá tentar parsear o que receber da api.
         usersApi.dataRequest(with: Endpoints.users, objectType: [User].self) { (result) in
 
             switch result {

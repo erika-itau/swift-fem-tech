@@ -6,7 +6,7 @@
 //  Copyright © 2020 Erika Albizzati. All rights reserved.
 //
 
-struct User: Codable {
+struct User: Decodable {
     //usando os mesmos nomes presentes na api
     var id: Int
     var name: String
@@ -19,7 +19,7 @@ struct User: Codable {
 
 //se quisesse nomear os itens de forma diferente, poderia fazer como abaixo:
 //
-//struct User: Codable {
+//struct User: Decodable {
 //
 //    var id: Int
 //    var nome: String

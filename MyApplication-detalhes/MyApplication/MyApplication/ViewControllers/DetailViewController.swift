@@ -41,6 +41,7 @@ class DetailViewController: UIViewController {
     func loadUsersPosts() {
         let url = Endpoints.posts + "?\(userId)"
         
+        // [Post].self indica o tipo para o qual o dataRequest irá tentar parsear o que receber da api.
         usersApi.dataRequest(with: url, objectType: [Post].self) { (result) in
             switch result {
             case .success(let posts):
@@ -81,6 +82,8 @@ extension DetailViewController: UITableViewDataSource {
         
         cell.selectionStyle = .none
         cell.textLabel?.text = "título: " + posts[indexPath.row].title
+        //é possível alterar cores e fontes aqui, acessando a proriedade textLabel ou detailTextLabel
+        cell.textLabel?.textColor = .purple
         cell.detailTextLabel?.text = "conteúdo: " + posts[indexPath.row].body
         cell.detailTextLabel?.numberOfLines = 0
         cell.textLabel?.numberOfLines = 0

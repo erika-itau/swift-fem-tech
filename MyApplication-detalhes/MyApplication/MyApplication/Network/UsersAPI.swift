@@ -8,7 +8,7 @@
 
 import Foundation
 
-//APPError enum which shows all possible errors
+//AppError representa possíveis erros no parse do objeto
 enum AppError: Error {
     case networkError(Error)
     case dataNotFound
@@ -16,7 +16,7 @@ enum AppError: Error {
     case invalidStatusCode(Int)
 }
 
-//Result enum to show success or failure
+//Result enum que indica se foi sucesso ou Erro
 enum Result<T> {
     case success(T)
     case failure(AppError)
@@ -25,40 +25,45 @@ enum Result<T> {
 
 struct UsersAPI {
 
-    //dataRequest which sends request to given URL and convert to Decodable Object
+    //dataRequest envia a requisicao para a url de parametro e converte para um tipo (que será definido por qm usar esse método) Decodable
     func dataRequest<T: Decodable>(with url: String, objectType: T.Type, completion: @escaping (Result<T>) -> Void) {
 
-        //create the url with NSURL
-        let dataURL = URL(string: url)! //change the url
+        //cria um objecto URL a partir da string enviada por parametro
+        let dataURL = URL(string: url)!
 
-        //create the session object
+        //Cria uma URLSession
         let session = URLSession.shared
 
-        //now create the URLRequest object using the url object
+        //Cria uma URLRequest usando a dataURL
         let request = URLRequest(url: dataURL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)
 
-        //create dataTask using the session object to send data to the server
+        //cria uma dataTask usando session para enviar dados ao servidor
+        //completion significa que o código soh entrará no response quando o servidor retornar o resultado da request.
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
 
+            
             guard error == nil else {
+                //se o objeto tem um erro
                 completion(Result.failure(AppError.networkError(error!)))
                 return
             }
 
             guard let data = data else {
+                //se nao recebeu nenhum dado no retorn da API
                 completion(Result.failure(AppError.dataNotFound))
                 return
             }
 
             do {
-                //create decodable object from data
+                //tenta criar um Decodable (tipo generico aqui porque qm define o tipo é qm chama esse metodo)
                 let decodedObject = try JSONDecoder().decode(objectType.self, from: data)
                 completion(Result.success(decodedObject))
             } catch let error {
+                //se nao for possivel criar o objeto do tipo esperado, error de parse
                 completion(Result.failure(AppError.jsonParsingError(error as! DecodingError)))
             }
         })
-
+        
         task.resume()
     }
 
