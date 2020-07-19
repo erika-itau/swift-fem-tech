@@ -10,7 +10,7 @@ import Foundation
 
 struct Endpoints {
     static let users = "\(API.baseUrl)/users"
-    static let pullRequests = "\(API.baseUrl)/posts/"
+    static let posts = "\(API.baseUrl)/posts/"
 }
 
 struct API {
