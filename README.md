@@ -19,8 +19,12 @@ Criar a requisição para buscar as postagens do usuário selecionado no módulo
 
 ## Ficha técnica
 App exemplo desenvolvido em `swift`
+
 Estrutura de Layouts utilizados: `AutoLayout`, `Storyboard`
+
 Request realizadas usando: `URLSession`, `Result` 
+
 Models usando: `Codable`
+
 Lista: `UITableView`
 
