@@ -18,13 +18,10 @@ Criar o layout para exibir a lista retornada na requisição (feita no módulo 2
 Criar a requisição para buscar as postagens do usuário selecionado no módulo anterior e exibir o resultado numa lista (código de referência SampleApp - detalhes) API utilizada: https://jsonplaceholder.typicode.com/posts?userId={id}
 
 ## Ficha técnica
-App exemplo desenvolvido em `swift`
+- App exemplo desenvolvido em `swift`
+- Estrutura de Layouts utilizados: `AutoLayout`, `Storyboard`
+- Request realizadas usando: `URLSession`, `Result` 
+- Models usando: `Codable`
+- Lista: `UITableView`
 
-Estrutura de Layouts utilizados: `AutoLayout`, `Storyboard`
-
-Request realizadas usando: `URLSession`, `Result` 
-
-Models usando: `Codable`
-
-Lista: `UITableView`
-
+#Autora: Erika Albizzati
