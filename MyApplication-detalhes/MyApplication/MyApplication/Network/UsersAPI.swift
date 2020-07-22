@@ -62,7 +62,9 @@ struct UsersAPI {
                 completion(Result.success(decodedObject))
             } catch let error {
                 //se nao for possivel criar o objeto do tipo esperado, error de parse
-                completion(Result.failure(AppError.jsonParsingError(error as! DecodingError)))
+                if let error = error as? DecodingError {
+                    completion(Result.failure(AppError.jsonParsingError(error)))
+                }
             }
         })
         

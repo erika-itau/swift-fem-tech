@@ -11,6 +11,7 @@ import UIKit
 class UsersViewController: UIViewController {
         
     @IBOutlet weak var tableView: UITableView!
+    
     var users: [User] = []
     let cellReuseIdentifier = "cell"
     var usersApi = UsersAPI()
