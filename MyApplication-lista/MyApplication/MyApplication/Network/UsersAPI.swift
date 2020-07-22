@@ -29,7 +29,9 @@ struct UsersAPI {
     func dataRequest<T: Decodable>(with url: String, objectType: T.Type, completion: @escaping (Result<T>) -> Void) {
         
         //cria um objecto URL a partir da string enviada por parametro
-        let dataURL = URL(string: url)!
+        guard let dataURL = URL(string: url) else {
+            return
+        }
         
         //Cria uma URLSession
         let session = URLSession.shared
